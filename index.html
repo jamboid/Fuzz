@@ -19,7 +19,7 @@
         <article class="cpArticle cp">
             <section class="in">
                 <header class="articleHeader">
-                    <h1 class="pageHeader">Fuzz</h1>
+                    <h1 class="pageTitle">Fuzz</h1>
                 </header>
                 <section id="docIntro">
                     <h1 class="beta">Introduction</h1>
@@ -29,22 +29,21 @@
                     <h1 class="beta">Principles</h1>
                     <p>The Framework separates presentational concerns into different hierarchical layers. This simplifies the role of each layer and allows a greater proportion of the codebase to be modular and rapidly reusable.</p>
                 </section>
-                <section id="components">
-                    <h2 class="beta">Components</h2>
-                    <p>All components consist of an outer container (<strong>.cp</strong>), which only holds the component in the grid regions, and an inner container (<strong>.in</strong>), which sets margin, padding and the component's general appearance.</p>
-                    <p>Having these inner and outer containers allows us to separate the component width from the component margins and padding, so components can be more rapidly reskinned and reused in different page regions.</p>
-                </section>
+                
                 <section id="hierarchy">
                     <h1 class="beta">Hierarchy</h1>
                     <p>The modular hierarchy is based on the components of the classical typographic grid.</p>
+                    <p>There are four levels of containers that used to create the general layout of the page and a pair of component-level containers that are used to place components precisely within that layout.</p>
+                    <p>The four layout levels are as follows:</p>                    
                     <h2 class="gamma">Stretch .st</h2>
                     <ul>
-                        <li>Use as a wrapper for complete page</li>
-                        <li>Allow full-width layers with inner content areas</li>
+                        <li>A single instance on a page can be used as a wrapper for complete page</li>
+                        <li>Multiple instances can be used to create full-width vertical layers with inner content areas</li>
                     </ul>
                     <h2 class="gamma">Field .fd</h2>
                     <ul>
-                        <li>Use as a wrapper for a top-level horizontal section (e.g. Page Header, Main Content, Page Footer)</li>
+                        <li>Used as a wrapper for a top-level horizontal section (e.g. Page Header, Main Content, Page Footer)</li>
+                        <li>Used as the inner container(s) for a stretch layer</li>
                     </ul>
                     <h2 class="gamma">Region .rg</h2>
                     <ul>
@@ -56,6 +55,12 @@
                         <li>Semantic container for group of repeating components or subcomponents</li>
                         <li>Generally doesn't have margins or paddings set</li>
                     </ul>
+                    
+                </section>
+                <section id="components">
+                    <h2 class="beta">Components</h2>
+                    <p>All components consist of an outer container (<strong>.cp</strong>), which only holds the component in the grid regions, and an inner container (<strong>.in</strong>), which sets margin, padding and the component's general appearance.</p>
+                    <p>Having these inner and outer containers allows us to separate the component width from the component margins and padding, so components can be styled independently of their context and therefore reused more easily.</p>
                     <h2 class="gamma">Component .cp</h2>
                     <ul>
                         <li>Wrapper class/container for page component</li>
@@ -63,16 +68,17 @@
                     </ul>
                     <h2 class="gamma">Inner Component Content .in</h2>
                     <ul>
-                        <li>Inner container used to set component's padding, margin and appearence independent of overall component width (set on .cp element)</li>
+                        <li>Inner container used to set component's padding, margin and appearance independent of overall component width (set on .cp element)</li>
                         <li>Block level element</li>
                     </ul>
                 </section>
+                
                 <section id="pages">
-                    <h1 class="beta">Pages</h1>
-                    <ul>
-                        <li><a href="navigation.html">Main Navigation</a></li>
-                        <li><a href="grid.html">Grid</a></li>
-                    </ul>
+                	<h2 class="beta">Pages</h2>
+                	<ul>
+                		<li><a href="grid.html">Grid</a>
+                		<li><a href="scroller.html">Scroller</a>
+                	</ul>
                 </section>
             </section>
         </article>

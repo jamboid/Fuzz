@@ -81,9 +81,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* Page Header */
-.pageHeader {
+.pageTitle {
     font-size: 40px;
     color: #DF4111;
+    padding:15px;
+}
+
+.cpArticle .pageTitle {
+	padding:0;	
 }
 
 /*---[ #1.2 Paragraphs ]---*/
@@ -152,7 +157,7 @@ img {
     width: 90%;
     margin: 0 auto;
     padding: 0;
-    max-width: 900px;
+    max-width: 1600px;
 }
 
 /*---[ #2.2 Field (.fd) ]---*/
@@ -243,11 +248,17 @@ img {
 	
 }
 
-.fdContent .in {
-	margin:15px;
+.rgMainContent .in {
+	margin:0 15px 25px;
 	padding:15px;
 	background:#fff;
-	box-shadow:1px 1px 0 1px rgba(0,0,0,0.3);
+}
+
+.rgSubContent .in {
+	padding:15px;
+	box-shadow:none;
+    background:#333;
+	color:#fff;
 }
 
 .cpArticle .in {
@@ -255,6 +266,99 @@ img {
 }
 
 /*---[ #3.3 Article Styles ]---*/
+
+.cpArticle .in {
+	background:#fff;
+}
+
+/*---[ #3.4 Main Navigation ]---*/
+.mainNav li {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.mainNav li a {
+    line-height: 1em;
+    display: block;
+    padding: 7px 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #444;
+}
+
+.mainNav h2 {
+    display: none
+}
+
+/*---[ #3.5 Scroller - Notes: Responsive scroller ]---*/
+.cpScroller {
+	margin:20px 0;	
+	position:relative;
+	height:100%;
+	overflow:hidden;
+}
+
+.cpScroller .in {
+	padding:0 0 3px;
+	margin:0 15px;
+	position:relative;
+	height:100%;
+	background:none;
+}
+
+.cpScroller ul {
+	width:100%;
+	padding:0;
+	display:block;
+	overflow:scroll;
+	white-space: nowrap;
+	background:#aaa;
+}
+
+.js .cpScroller ul {
+	overflow:hidden;
+}
+
+.cpScroller ul li {
+	display:inline-block;
+	vertical-align:top;
+	width:25%;
+	position:relative;
+}
+
+.cpScroller ul li .content {
+	margin:10px;
+	padding:10px;
+	display:block;
+	white-space:normal;
+}
+
+.cpScroller ul li .image {
+	line-height:0;
+	margin:0;
+}
+
+.cpScroller ul li .summary {
+	text-decoration:none;
+	position:absolute;
+	width:80%;
+	top:23px;
+	left:25px;
+	color:#fff;	
+}
+
+.cpScroller .scrollControls {
+	margin:10px 0 0;
+	text-align:center;		
+}
+
+.cpScroller .scrollControls a {
+	padding:4px 10px;
+	margin:0 5px;
+	text-decoration:none;
+	background:#666;
+	color:#fff;	
+}
 
 /*---[ #3.X Utilities ]---*/
 
@@ -275,16 +379,20 @@ img {
 
 /*---[ #4.1 Border Radius ]---*/
 
-/*
-.cpArticle .in,
-.fdContent .in {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-*/
-
 /*---[ #4.2 Box Shadow ]---*/
+
+.rgMainContent .in {
+	-webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 0 rgba(0,0,0,0.3);
+	box-shadow:2px 2px 0 rgba(0,0,0,0.3);	
+}
+
+
+.scrollContent {
+	-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;
+	-moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;
+	box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;	
+}
 
 /*---[ #4.3 Text Shadow ]---*/
 
@@ -414,14 +522,6 @@ a {
 	/*---[ Scroller ]---*/
 	.cpScroller ul li {
 		width:50%;	
-	}
-
-	/*  transition */
-
-	.transitions {
-	    transition: all 0.5s ease-in-out;
-	    -webkit-transition: all 0.5s ease-in-out;
-	    -moz-transition: all 0.5s ease-in-out;
 	}
 
 	.stSiteHeader h1 span {
