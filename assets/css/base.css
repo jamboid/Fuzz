@@ -1,0 +1,575 @@
+/* Fuzz framework - base.css 
+
+INDEX
+========
+
+#1 Basic Elements
+	#1.1 Headings
+	#1.2 Paragraphs
+	#1.3 Lists
+	#1.4 Links / Buttons
+	#1.5 Images
+
+#2 Framework Levels
+	#2.1 Stretch (.st)
+	#2.2 Field (.fd)
+	#2.3 Region (.rg)
+	#2.4 Group (.gp)
+	#2.5 Component (.cp)	
+
+#3 Page Components
+	#3.1 Grid Alignment
+	#3.2 Inner Base Styles
+	#3.3 Article Styles
+	#3.X Utilities
+
+#4 CSS3 Enhancements
+	#4.1 Border Radius
+	#4.2 Box Shadow
+	#4.3 Text Shadow
+	#4.4 Gradients
+	#4.5 Transforms
+	#4.6 Transitions
+	#4.7 Animations
+
+#5 Media Queries
+	#5.1 Max Width = 1024px
+	#5.2 Max Width = 768px
+	#5.3 Max Width = 480px
+	#5.4
+	#5.5
+
+*/
+
+/*---------------------------*/
+/*---[ #1 Basic Elements ]---*/
+/*---------------------------*/
+
+
+body {
+    font-family: Helvetica, sans serif;
+    font-size: 100%;
+    line-height: 1.5;
+    background: #E5E5E5;
+    color: #333;
+}
+
+/*---[ #1.1 Headings ]---*/
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0 0 18px;
+}
+
+.alpha {
+    font-size: 36px;
+}
+
+.beta {
+    font-size: 30px;
+}
+
+.gamma {
+    font-size: 24px
+}
+
+.delta {
+    font-size: 18px
+}
+
+.epsilon {
+    font-size: 14px
+}
+
+/* Page Header */
+.pageHeader {
+    font-size: 40px;
+    color: #DF4111;
+}
+
+/*---[ #1.2 Paragraphs ]---*/
+
+p {
+    margin: 0 0 18px;
+}
+
+/*---[ #1.3 Lists ]---*/
+
+
+/*---[ #1.4 Links / Buttons ]---*/
+
+a {
+    color: #000;
+    font-weight: bold;
+}
+
+a:active {
+    position: relative;
+    top: 1px;
+}
+
+a:active {
+    position: relative;
+    top: 1px;
+}
+
+a:hover,
+a:focus {
+    color: #777
+}
+
+.action a {
+    padding: 5px 25px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.action a:hover {
+    background: #777
+}
+
+/*---[ #1.5 Images ]---*/
+
+img {
+    max-width: 100%;
+}
+
+
+/*------------------------------*/
+/*---[ #2. Framework Levels ]---*/
+/*------------------------------*/
+
+/* Notes - basic styles for 5 levels of the framework */
+
+/*---[ #2.1 Stretch (.st) ]---*/
+
+.st {
+    width: 100%
+}
+
+.st .fd {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 900px;
+}
+
+/*---[ #2.2 Field (.fd) ]---*/
+
+.fd {
+    padding: 0 0 20px;
+    clear: both;
+}
+
+/*---[ #2.3 Region (.rg) ]---*/
+
+.rgMainContent {
+    float: left;
+    width: 75%;
+}
+
+.rgSubContent {
+    float: right;
+    width: 25%;
+}
+
+/*---[ #2.4 Group (.gp) ]---*/
+
+.gp {
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    position: relative;
+    z-index: 0;
+}
+
+/*---[ #2.5 Component (.cp) - Set outer dimensions and display ]---*/
+
+.cp {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Component Groups */
+.rgMainContent .gp .cp {
+    float: left;
+    width: 100%;
+}
+
+.rgMainContent .gpOf2 .cp {
+    width: 50%
+}
+
+.rgMainContent .gpOf2 .cpMajor {
+	width:66.6666%;	
+}
+
+.rgMainContent .gpOf2 .cpMinor {
+	width:33.3333%;
+}
+
+.rgMainContent .gpOf3 .cp {
+    width: 33.3333%;
+}
+
+.rgMainContent .gpOf3 .cpMajor {
+	width:50%;	
+}
+
+.rgMainContent .gpOf3 .cpMinor {
+	width:25%;
+}
+
+/*----------------------------*/
+/*---[ #3 Page Components ]---*/
+/*----------------------------*/
+
+/* Notes - Set component styles, including padding, margins and borders */
+
+/*---[ #3.1 Grid Alignment - margins ]---*/
+
+.in {
+    margin:0 15px 30px;
+}
+
+/*---[ #3.2 Inner Base Styles ]---*/
+
+.cp .in {
+	
+}
+
+.fdContent .in {
+	margin:15px;
+	padding:15px;
+	background:#fff;
+	box-shadow:1px 1px 0 1px rgba(0,0,0,0.3);
+}
+
+.cpArticle .in {
+    padding: 25px;
+}
+
+/*---[ #3.3 Article Styles ]---*/
+
+/*---[ #3.X Utilities ]---*/
+
+/* Self-Clearing Floats */
+.fd:after,
+.in:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/*---------------------------*/
+/*---[ #4 CSS3 Enhancements ]---*/
+/*---------------------------*/
+
+/*---[ #4.1 Border Radius ]---*/
+
+/*
+.cpArticle .in,
+.fdContent .in {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+*/
+
+/*---[ #4.2 Box Shadow ]---*/
+
+/*---[ #4.3 Text Shadow ]---*/
+
+.action a {
+    text-shadow: 0 1px 3px black
+}
+
+/*---[ #4.4 Gradients ]---*/
+
+/*---[ #4.5 Transforms ]---*/
+
+/*---[ #4.6 Transitions ]---*/
+a {
+    transition: all .2s linear
+}
+
+.action a {
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+/*---[ #4.7 Animations ]---*/
+
+/*--------------------------*/
+/*---[ 5. Media Queries ]---*/
+/*--------------------------*/
+
+/*---[ #5.1 Max Width = 1024px ]---*/
+
+@media only screen and (max-width:1024px) { 
+	.rgMainContent,
+	.rgSubContent {
+	    width: 100%
+	}
+
+	.rgSubContent .cp {
+	    float: left;
+	    width: 50%;
+	}
+
+	/*---[ Grid Alignment - margins ]---*/
+
+	/*---[ Component styles ]---*/
+
+	.detail .img {
+	    float: left;
+	    max-width: 50%;
+	}
+
+	.detail .desc {
+	    overflow: visible
+	}
+	
+	/*---[ Scroller ]---*/
+	.cpScroller ul li {
+		width:33.3333%;	
+	}
+}
+
+/*---[ #5.1 Max Width = 768px ]---*/
+@media only screen and (max-width: 768px) { 
+	
+	/*---[ Grid Alignment - margins ]---*/	
+	.st .fd,
+	.rg,
+	.rg .gp .cp {
+	    width: 100%
+	}
+	
+	
+
+	.rg .gp .cp .in {
+	    margin:15px;
+	}
+
+	.cp .desc {
+	    float: none;
+	    max-width: 100%;
+	    clear: none;
+	}
+
+	/*---[ Main Nav ]---*/
+
+	.mainNav {
+    	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.mainNav h2 {
+	    display: block;
+	    padding: 5px 20px;
+	    margin: 0;
+	    background: #fff;
+	    cursor: pointer;
+	}
+
+	.js .mainNav nav {
+	    height: 0;
+	    overflow: hidden;
+	    margin: 0;
+	    padding: 0;
+	    background: #fff;
+	}
+
+	.js .mainNav.show nav {
+	    height: auto;
+	    padding: 0 20px 20px;
+	}
+
+	.js .mainNav ul li {
+	    display: block;
+	    margin: 10px 0 0;
+	}
+
+	.js .mainNav.show ul li:first-child {
+	    margin-top: 0
+	}
+	
+	/*---[ Generic Component Elements ]---*/
+	
+	.cp .img {
+		border:none;
+	}
+	
+	/*---[ Scroller ]---*/
+	.cpScroller ul li {
+		width:50%;	
+	}
+
+	/*  transition */
+
+	.transitions {
+	    transition: all 0.5s ease-in-out;
+	    -webkit-transition: all 0.5s ease-in-out;
+	    -moz-transition: all 0.5s ease-in-out;
+	}
+
+	.stSiteHeader h1 span {
+	    display: none
+	}
+}
+
+/*---[ #5.1 Max Width = 480px ]---*/
+@media only screen and (max-width: 480px) { 
+	.detail .image {
+	    float: none;
+	    max-width: 100%;
+	    margin-right: 0;
+	}
+
+	.fd,
+	.rg,
+	.in,
+	.fwPointer h1 {
+	    margin: 0
+	}
+
+	.fdHeader .brand h2 {
+	    display: none
+	}
+
+	.in,
+	.fdHeader .brand {
+	    margin-left: 15px;
+	    margin-right: 15px;
+	}
+	
+		/*---[ Scroller ]---*/
+	.cpScroller ul li {
+		width:100%;	
+	}
+}
+
+/*---[ Framework Heading ]---*/
+
+.stSiteHeader {
+    background: #000
+}
+
+.stSiteHeader .in {
+    margin-bottom: 0
+}
+
+.stSiteHeader h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.stSiteHeader h1 span {
+    font-size: 16px;
+    color: #999;
+    margin-left: 4px;
+}
+
+/*---[ Developer Tools - NOT FOR PRODUCTION ]---*/
+
+.debugToggle {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 4px 10px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.debugToggle:after {
+    content: " off"
+}
+
+.debugMode .debugToggle {
+    background: #990000
+}
+
+.debugMode .debugToggle:after {
+    content: " on"
+}
+
+.debugMode .fd:hover {
+    box-shadow: inset 0 0 0 4px blue
+}
+
+.debugMode .rg:hover {
+    box-shadow: inset 0 0 0 4px green
+}
+
+.debugMode .gp:hover {
+    box-shadow: inset 0 0 0 4px orange
+}
+
+.debugMode .cp:hover {
+    box-shadow: inset 0 0 0 4px red
+}
+
+.pg,
+.rg,
+.gp,
+.cp {
+    -webkit-transition: box-shadow .2s ease-in-out;
+    -moz-transition: box-shadow .2s ease-in-out;
+    -o-transition: box-shadow .2s ease-in-out;
+    -ms-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+}
+
+/* Framework Pointers */
+.fwPointer h1 {
+    padding: 5px 15px;
+    margin: 0 0 30px;
+    background: #000;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Not in use */
+
+/* Border that doesn't stick out from components */
+
+/*
+.gp {
+	border-bottom:2px solid #ddd;	
+}
+
+.gp:before,
+.gp:after {
+	content:" ";
+	position:absolute;
+	bottom:-2px;
+	width:15px;
+	height:2px;
+	background:#F6F2E9;
+	display:block;
+	z-index:100;		
+}
+
+.gp:before {
+	left:0;
+}
+
+.gp:after {
+	right:0;
+}
+ 
+*/
