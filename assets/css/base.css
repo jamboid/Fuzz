@@ -50,7 +50,7 @@ body {
     font-family: Helvetica, sans serif;
     font-size: 100%;
     line-height: 1.5;
-    background: #E5E5E5;
+    background: #fff;
     color: #333;
 }
 
@@ -251,7 +251,7 @@ img {
 .rgMainContent .in {
 	margin:0 15px 25px;
 	padding:15px;
-	background:#fff;
+	background:#eaeaea;
 }
 
 .rgSubContent .in {
@@ -262,7 +262,7 @@ img {
 }
 
 .cpArticle .in {
-    padding: 25px;
+    padding:25px 0;
 }
 
 /*---[ #3.3 Article Styles ]---*/
