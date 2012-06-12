@@ -272,12 +272,20 @@ img {
 }
 
 /*---[ #3.4 Main Navigation ]---*/
-.mainNav li {
+.cpMainNav .in {
+	margin:0 0 30px;	
+}
+
+.cpMainNav ul {
+	padding:0 15px;
+}
+
+.cpMainNav li {
     display: inline-block;
     font-weight: bold;
 }
 
-.mainNav li a {
+.cpMainNav li a {
     line-height: 1em;
     display: block;
     padding: 7px 20px;
@@ -286,7 +294,7 @@ img {
     background: #444;
 }
 
-.mainNav h2 {
+.cpMainNav h2 {
     display: none
 }
 
@@ -478,38 +486,37 @@ a {
 	}
 
 	/*---[ Main Nav ]---*/
-
-	.mainNav {
-    	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-	}
-
-	.mainNav h2 {
+	.cpMainNav h2 {
 	    display: block;
 	    padding: 5px 20px;
 	    margin: 0;
-	    background: #fff;
+	    background: #ccc;
 	    cursor: pointer;
 	}
 
-	.js .mainNav nav {
+	.js .cpMainNav nav {
 	    height: 0;
 	    overflow: hidden;
-	    margin: 0;
 	    padding: 0;
-	    background: #fff;
+	    background: #ccc;
 	}
 
-	.js .mainNav.show nav {
+	.js .cpMainNav.show nav {
 	    height: auto;
 	    padding: 0 20px 20px;
 	}
+	
+	.js .cpMainNav ul {
+		padding:0;
+		margin-top:0;		
+	}
 
-	.js .mainNav ul li {
+	.js .cpMainNav ul li {
 	    display: block;
 	    margin: 10px 0 0;
 	}
 
-	.js .mainNav.show ul li:first-child {
+	.js .cpMainNav.show ul li:first-child {
 	    margin-top: 0
 	}
 	

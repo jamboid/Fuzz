@@ -28,7 +28,7 @@ Fuzz = (function ($) {
 	api.showElementWidth = function (element){
 		console.log($(element).width());	
 	}
-			
+	
     // Public initialisation
 	api.init = function () { 
 		priv.setDebugMode();
