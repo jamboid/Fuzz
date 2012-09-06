@@ -5,40 +5,46 @@ var Fuzz = Fuzz || {};
 //
 // Base namespace for the Fuzz Framework
 Fuzz = (function ($) {
-	
-	// Variables
-	var priv = {},		// Set private object
-		api = {}, 		// Set public API object
-		defaults = {};	// Set defaults object
+    "use strict";
+    // Variables
+    var defaults = {},
+        // Set debug mode to outline framework elements
+        setDebugMode = function () {
+            var debugButton = '<div class="debugToggle">Debug mode</div>';
+            $('body').append(debugButton);
+            $(".debugToggle").on("click", function (event) {
+                event.preventDefault();
+                $("body").toggleClass("debugMode");
+            });
+        },
+        // Public methods           
+        showElementWidth = function (element) {
+            Fuzz.cl($(element).width());
+        },
 
-	// Private methods //
-			
-	// Set debug mode to outline framework elements
-	priv.setDebugMode = function () {
-		var debugButton = '<div class="debugToggle">Debug mode</div>';
-		$('body').append(debugButton);
-		$(".debugToggle").on("click",function(event){
-		  $("body").toggleClass("debugMode");
-		  event.preventDefault();
-		});
-	};
-	
-	// Public methods
-			
-	api.showElementWidth = function (element){
-		console.log($(element).width());	
-	}
-	
-    // Public initialisation
-	api.init = function () { 
-		priv.setDebugMode();
-		//console.log("Fuzz.init called");
-	};
-	
-	// Return Public API	
-	return api;
+        // Console.log function with check for browsers that don't support it
+        cl = function (logMessage) {
+            if(window.console){
+                if(console.log){
+                console.log(logMessage);
+                }   
+            }
+        },
+        // Public initialisation
+        init = function () {
+            setDebugMode();
+            Fuzz.Scroller.init();
+            cl("Fuzz.init called");
+        };
 
-})(jQuery); 
+    // Return Public API    
+    return {
+        init: init,
+        cl: cl,
+        showElementWidth: showElementWidth
+    };
+
+}(jQuery));
 
 // Initialize
 $(function() {

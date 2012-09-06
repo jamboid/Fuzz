@@ -2,32 +2,32 @@ var Fuzz = Fuzz || {};
 
 // Fuzz namespace
 Fuzz.Test = (function ($) {
-
+    "use strict";
     // Private variables
-	var priv = {},		// Set private object
-		api = {}, 		// Set public API object
-		defaults = {};	// Set defaults object
-	
-	// Private Methods
-	priv.countElements = function (elem){		
-		return $(elem).length
-	};
-		
-	// Public methods
-	api.elementCheck = function (elements){
-		var elementCount = priv.countElements(elements);
-		console.log("There are " + elementCount + " of elements: " + elements); 		
-	};
-	
-    // Public initialisation
-	api.init = function () {
+    var api = {},       // Set public API object
+        defaults = {},  // Set defaults object
+        countElements = function (elem) {
+            return $(elem).length;
+        },
 
+        // Public methods
+        elementCheck = function (elements) {
+            var elementCount = countElements(elements);
+            Fuzz.cl("There are " + elementCount + " of elements: " + elements);
+        },
+
+        // Public initialisation
+        init = function () {
+            Fuzz.cl("Fuzz.Test initialised");
+        };
+
+    // Return the public api
+    return {
+        init: init,
+        elementCheck: elementCheck
     };
-	
-	// Return the public api
-	return api;
 
-})(jQuery);
+}(jQuery));
 
 // Initialise
 $(function() {

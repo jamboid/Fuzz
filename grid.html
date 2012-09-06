@@ -12,10 +12,7 @@
 	/* set the html tag to have a javascript class to hide all the dynamic stuff */
 	document.getElementsByTagName("html")[0].className = "js";
 </script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/Fuzz.js"></script>
-<script type="text/javascript" src="assets/js/Fuzz.Navigation.js"></script>
-<script type="text/javascript" src="assets/js/Fuzz.Test.js"></script>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 <div class="st stSiteHeader">
@@ -33,12 +30,16 @@
             <h1 class="pageTitle">Grid layouts</h1>
         </hgroup>
     </header>
-    <section class="fdContent fd"> 
-        <!--<hgroup class="fwPointer">
-      <h1>Basic Components</h1>
-    </hgroup>-->
-        <!-- END OF Feature Component -->
+    <section class="fdContent fd">
+    	<section class="rg">
+        <div class="cp cpHero">
+            	<div class="in">
+                	<h1 class="alpha">Hero Panel</h1>
+                </div>
+            </div>
+    	</section>
         <section class="rgMainContent rg"> 
+            
             <!-- COMPONENT gp -->
             <ul class="gp gpOf3">
                 <li class="cp">
@@ -226,5 +227,9 @@
         </div>
     </footer>
 </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/Fuzz.js"></script>
+<script type="text/javascript" src="assets/js/Fuzz.Scroller.js"></script>
+<script type="text/javascript" src="assets/js/Fuzz.Navigation.js"></script>
 </body>
 </html>
