@@ -42,7 +42,7 @@ The four layout levels, outer to inner, are as follows:
 
 ### An example of top level elements
 
-'''html
+```html
 <body>
   <div class="stPage st">
     <header class="fdPageHeader fd">
@@ -60,7 +60,7 @@ The four layout levels, outer to inner, are as follows:
     </footer>
   </div>
 </body>
-'''
+```
 
 ## Components
 
@@ -86,13 +86,13 @@ Any element set at one of these framework levels should have one of the two-lett
 
 For example, a main navigation menu component might have the following HTML:
 
-'''html
+```html
 <nav class="cpMainNav cpNav cp">
   <div class="in">
     <ul class="menu">...</ul>
   </div>
 </nav>
-'''
+```
 
 The component has the general "cp" component class, a more specific "cpNav" class that could be used to provide general list styles for the menu, and a very specific "cpMainNav" class that can be used to add or override styles for just the main navigation menu.
 
