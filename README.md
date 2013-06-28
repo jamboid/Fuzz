@@ -66,7 +66,7 @@ The four layout levels, outer to inner, are as follows:
 
 All components consist of an outer container (.cp), which only holds the component in the grid regions, and a single inner container (.in), which sets margin, padding and the component's general appearance.
 
-Having these inner and outer containers allows us to separate the component width from the component margins and padding, so components can be styled independently of their context and therefore reused more easily.
+Having these inner and outer containers allows you to separate the component width from the component margins and padding, so components can be styled independently of their context and therefore reused more easily.
 
 ### Component - prefix "cp"
 
@@ -78,7 +78,7 @@ Having these inner and outer containers allows us to separate the component widt
 
 * Inner container used to set component's padding, margin and appearance independent of overall component width (set on .cp element)
 * Block level element
-* '''Not used a prefix for more specific classes'''
+* **Not used a prefix for more specific classes**
 
 ## Creating Modular CSS
 
