@@ -10,7 +10,7 @@ The framework separates presentational concerns into different hierarchical laye
 
 The Fuzz 2.0 syntax for layout elements is an attempt to create a more useful naming convention for the classes added to Fuzz elements. The basic syntax is as follows:
 
-.prefix_NameOfElement--variant-name
+**.prefix_NameOfElement--variant-name**
 
 It allows us to do a couple of new things:
 
@@ -26,7 +26,7 @@ Sass 3.3 adds a shorthand syntax for creating BEM (block-element-modifier) class
 
 For example, we have a set of promo components with the basic Component class "**cp_Promo**", but also a featured promo component that is styled differently. To create this feature promo component we would add the class "**cp_Promo--feature**". This allows us to write the following Sass code:
 
-```sass
+```scss
 .cp_Promo {
 	
 	// base promo styles
@@ -39,7 +39,7 @@ For example, we have a set of promo components with the basic Component class "*
 
 which will output the following CSS:
 
-```sass
+```scss
 .cp_Promo {
 	// base promo styles
 }
