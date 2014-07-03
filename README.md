@@ -20,13 +20,13 @@ It allows us to do a couple of new things:
 
 With Fuzz 1.0 you added a prefix-only class to an element to add basic properties (e.g. "fd" as base class added to each Field element). Fuzz 2.0 removes the need for this extra class by using CSS3 selectors to target the prefix portion of the new class name structure.
 
-For example, we can add basic properties to a main navigation Component, **cp_MainNav**, by using the CSS selector **[class^="cp_"]**.
+For example, we can add basic properties to a navigation Component, **cp_Nav**, by using the CSS selector **[class^="cp_"]**.
 
 #### 2. Use the "element-modifier" part of the BEM syntax in Sass
 
 Sass 3.3 adds a shorthand syntax for creating BEM (block-element-modifier) class structures. The block-element relationship is less important in Fuzz, but the **"element-modifier"** relationship is replicated in the **"NameOfElement--variant-name"** portion of the general class syntax.
 
-For example, we have a set of promo components with the basic Component class **"cp_Promo"**, but also a featured promo component that is styled differently. To create this feature promo component we would add the class **"cp_Promo--feature"**. This allows us to write the following Sass code:
+For example, we have a set of promo components with the basic Component class **"cp_Promo"** (see below for more details on Fuzz Components), but also a featured promo component that is styled differently. To create this feature promo component we would add the class **"cp_Promo--feature"**. This allows us to write the following Sass code:
 
 ```scss
 .cp_Promo {
@@ -85,7 +85,7 @@ The four layout levels, outer to inner, are as follows:
 ### 2. Field - prefix "fd_"
 
 * Used as a wrapper for a top-level horizontal section (e.g. Page Header, Main Content, Page Footer)
-* Used as the inner container(s) for a stretch layer
+* Used as the inner container(s) for a full-width Stage layer
 
 
 ### 3. Region - prefix "rg_"
@@ -106,7 +106,7 @@ The four layout levels, outer to inner, are as follows:
   <div class="st_Page">
     <header class="fd_PageHeader">
       <div class="rg_Brand">...</div>
-      <div class="rg_Navigation">...</div>
+      <div class="rg_Nav--main rg_Nav">...</div>
     </header>
     <div class="fd_PageContent">
       <div class="rg_MainContent">...</div>
@@ -115,7 +115,7 @@ The four layout levels, outer to inner, are as follows:
       </div>
     </div>
     <footer class="fd_PageFooter">
-      <div class="rg_Navigation--footer">...</div>
+      <div class="rg_Nav--footer rg_Nav">...</div>
     </footer>
   </div>
 </body>
@@ -131,7 +131,6 @@ Having these inner and outer containers allows you to separate the component wid
 
 * Wrapper class/container for page component
 * Only has an outer width dimension set to place within group, region or field
-
 
 ### Inner Component Content - class "in"
 
@@ -155,7 +154,7 @@ For example, a main navigation menu component might have the following HTML:
 
 The component has the general "cp_Nav" component class (which inherits the styles provided by the **[class^="cp_"]** selector) and a more specific "cp_Nav--main" class that could be used to provide general list styles for the menu.
 
-The convention for ordering classes on an element is variant classes first, then the more general class
+The convention for ordering classes on an element is variant classes first, then the more general class.
 
 ### Extending the Framework
 
@@ -173,7 +172,7 @@ Below the level of the Fuzz Component, we still have lots of different HTML elem
 
 It's tempting to follow the hierarchy down further and tie component element styles to the Fuzz Component that contains them, along the lines of the BEM system. But at this level we should be thinking in terms of an [Atomic design](http://bradfrostweb.com/blog/post/atomic-web-design/) or other bottom-up system that can be used as a construction kit for building larger components.
 
-Creating a UI kit takes planning and an overall understanding of the site design, so you need to start there. Identify all the elements and sub-components and how their styles can be semantically categorised and sorted. A lot of this depends on the design and your own personal preferences for organising your Sass-CSS. But I would strongly suggest that the classes used to implement this system use the same **element-modifier** relationship used the Fuzz system:
+Creating a UI kit takes planning and an overall understanding of the site design, so you need to start there. Identify all the elements and sub-components and how their styles can be semantically categorised and sorted. A lot of this depends on the design and your own personal preferences for organising your Sass-CSS. But I would strongly suggest that the classes used to implement this system use the same BEM **element-modifier** relationship used the Fuzz system:
 
 **nameOfElement--variant**
 
