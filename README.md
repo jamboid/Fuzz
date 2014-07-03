@@ -4,11 +4,86 @@ Fuzz 2.0 is a lightweight HTML/Sass-CSS framework designed to provide fast imple
 
 The framework separates presentational concerns into different hierarchical layers. This simplifies the role of each layer and allows a greater proportion of the codebase to be modular and rapidly reusable.
 
----
+## Hierarchy of Containers
 
-## The Layout Framework
+The modular Fuzz hierarchy is (sort of) based on the components of the classical typographic grid.
 
-### General Syntax
+There are four levels of containers that can be used to create the general layout of the page and a pair of component-level containers that are used to place components precisely within that layout.
+
+The four layout levels, outer to inner, are as follows:
+
+### 1. Stage - prefix "st_"
+
+* A single instance on a page can be used as a wrapper for complete page
+
+```html
+<div class="st_Page">...</div>
+```
+
+* Multiple instances can be used to create full-width vertical layers with inner content areas
+
+```html
+<div class="st_Header">...</div>
+<div class="st_PageContent">...</div>
+<div class="st_Footer">...</div>
+```
+
+### 2. Field - prefix "fd_"
+
+* Used as a wrapper for a top-level horizontal section (e.g. Page Header, Main Content, Page Footer)
+* Used as the inner container(s) for a full-width Stage layer
+
+### 3. Region - prefix "rg_"
+
+* Define the general content regions within a Field (e.g. Brand, Main Navigation, Main Column, Sub Column)
+* Generally doesn't have margins or paddings set
+
+### 4. Group - prefix "gp_"
+
+* Semantic container for group of repeating components or subcomponents
+* Generally doesn't have margins or paddings set
+
+### An example of top level elements
+
+```html
+<body>
+  <div class="st_Page">
+    <header class="fd_PageHeader">
+      <div class="rg_Brand">...</div>
+      <div class="rg_Nav--main rg_Nav">...</div>
+    </header>
+    <div class="fd_PageContent">
+      <div class="rg_MainContent">...</div>
+      <div class="rg_SubContent">
+        <div class="gp_RelatedFeatures">...</div>
+      </div>
+    </div>
+    <footer class="fd_PageFooter">
+      <div class="rg_Nav--footer rg_Nav">...</div>
+    </footer>
+  </div>
+</body>
+```
+
+## Components
+
+All components consist of an outer container, with a **cp_** prefix, which only holds the component in the grid regions, and a single inner container (with a single **in** class), which sets margin, padding and the component's general appearance.
+
+Having these inner and outer containers allows you to separate the component width from the component margins and padding, so components can be styled independently of their context and therefore reused more easily.
+
+### Outer Component Wrapper - prefix "cp_"
+
+* Wrapper class/container for page component
+* Only has an outer width dimension set to place within group, region or field
+
+### Inner Component Content - class "in"
+
+* Inner container used to set component's padding, margin and appearance independent of overall component width (set on .cp element)
+* Block level element
+* **Not used a prefix for more specific classes**
+
+
+## The General Syntax
 
 The Fuzz 2.0 syntax for layout elements is an attempt to create a more useful naming convention for the classes added to Fuzz elements. The basic syntax is as follows:
 
@@ -16,13 +91,13 @@ The Fuzz 2.0 syntax for layout elements is an attempt to create a more useful na
 
 It allows us to do a couple of new things:
 
-#### 1. Specify base styles using CSS3 selectors
+### 1. Specify base styles using CSS3 selectors
 
 With Fuzz 1.0 you added a prefix-only class to an element to add basic properties (e.g. "fd" as base class added to each Field element). Fuzz 2.0 removes the need for this extra class by using CSS3 selectors to target the prefix portion of the new class name structure.
 
 For example, we can add basic properties to a navigation Component, **cp_Nav**, by using the CSS selector **[class^="cp_"]**.
 
-#### 2. Use the "element-modifier" part of the BEM syntax in Sass
+### 2. Use the "element-modifier" part of the BEM syntax in Sass
 
 Sass 3.3 adds a shorthand syntax for creating BEM (block-element-modifier) class structures. The block-element relationship is less important in Fuzz, but the **"element-modifier"** relationship is replicated in the **"NameOfElement--variant-name"** portion of the general class syntax.
 
@@ -58,85 +133,6 @@ Unfortunately we need to still use multiple classes for element variants because
 
 It's sometimes useful to break different aspects of an element's presentation into different classes to follow a modular CSS approach, so a Fuzz element can have multiple base classes (and additional variant classes) if required.
 
-## Hierarchy of Containers
-
-The modular Fuzz hierarchy is (sort of) based on the components of the classical typographic grid.
-
-There are four levels of containers that can be used to create the general layout of the page and a pair of component-level containers that are used to place components precisely within that layout.
-
-The four layout levels, outer to inner, are as follows:
-
-### 1. Stage - prefix "st_"
-
-* A single instance on a page can be used as a wrapper for complete page
-
-```html
-<div class="st_Page">...</div>
-```
-
-* Multiple instances can be used to create full-width vertical layers with inner content areas
-
-```html
-<div class="st_Header">...</div>
-<div class="st_PageContent">...</div>
-<div class="st_Footer">...</div>
-```
-
-### 2. Field - prefix "fd_"
-
-* Used as a wrapper for a top-level horizontal section (e.g. Page Header, Main Content, Page Footer)
-* Used as the inner container(s) for a full-width Stage layer
-
-
-### 3. Region - prefix "rg_"
-
-* Define the general content regions within a Field (e.g. Brand, Main Navigation, Main Column, Sub Column)
-* Generally doesn't have margins or paddings set
-
-
-### 4. Group - prefix "gp_"
-
-* Semantic container for group of repeating components or subcomponents
-* Generally doesn't have margins or paddings set
-
-### An example of top level elements
-
-```html
-<body>
-  <div class="st_Page">
-    <header class="fd_PageHeader">
-      <div class="rg_Brand">...</div>
-      <div class="rg_Nav--main rg_Nav">...</div>
-    </header>
-    <div class="fd_PageContent">
-      <div class="rg_MainContent">...</div>
-      <div class="rg_SubContent">
-        <div class="gp_RelatedFeatures">...</div>
-      </div>
-    </div>
-    <footer class="fd_PageFooter">
-      <div class="rg_Nav--footer rg_Nav">...</div>
-    </footer>
-  </div>
-</body>
-```
-
-## Components
-
-All components consist of an outer container, with a **cp_** prefix, which only holds the component in the grid regions, and a single inner container (with a single **in** class), which sets margin, padding and the component's general appearance.
-
-Having these inner and outer containers allows you to separate the component width from the component margins and padding, so components can be styled independently of their context and therefore reused more easily.
-
-### Component - prefix "cp_"
-
-* Wrapper class/container for page component
-* Only has an outer width dimension set to place within group, region or field
-
-### Inner Component Content - class "in"
-
-* Inner container used to set component's padding, margin and appearance independent of overall component width (set on .cp element)
-* Block level element
-* **Not used a prefix for more specific classes**
 
 ## Creating Modular CSS
 
@@ -177,8 +173,6 @@ Creating a UI kit takes planning and an overall understanding of the site design
 **nameOfElement--variant**
 
 This gives a consistency between the two halts of the overall styling system.
-
----
 
 ## Author
 
