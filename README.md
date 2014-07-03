@@ -1,6 +1,6 @@
 # Fuzz 2.0
 
-Fuzz 2.0 is a lightweight HTML framework designed to provide fast implementation of custom, responsive grid-based websites.
+Fuzz 2.0 is a lightweight HTML/Sass-CSS framework designed to provide fast implementation of custom, responsive grid-based websites.
 
 The framework separates presentational concerns into different hierarchical layers. This simplifies the role of each layer and allows a greater proportion of the codebase to be modular and rapidly reusable.
 
