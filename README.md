@@ -160,8 +160,6 @@ In this situation, create a new two-letter prefix that makes sense and follow al
 
 A real-world example of this would be the flexible grid system used on the [Good website](http://wearegood.com). The grid system was complex enough that it made sense to create a new set of classes to manage it. These classes used a "gd" prefix (it currently uses the older Fuzz 1.0 syntax) and could be applied alongside the Fuzz framework classes at multiple levels.
 
----
-
 ## Modular Styles for Component Elements
 
 Below the level of the Fuzz Component, we still have lots of different HTML elements and groups of elements that need styled in a systematic and rational way.
