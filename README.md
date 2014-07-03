@@ -71,12 +71,12 @@ All components consist of an outer container, with a **cp_** prefix, which only 
 
 Having these inner and outer containers allows you to separate the component width from the component margins and padding, so components can be styled independently of their context and therefore reused more easily.
 
-#### Outer Component Wrapper - prefix "cp_"
+### Outer Component Wrapper - prefix "cp_"
 
 * Wrapper class/container for page component
 * Only has an outer width dimension set to place within group, region or field
 
-#### Inner Component Content - class "in"
+### Inner Component Content - class "in"
 
 * Inner container used to set component's padding, margin and appearance independent of overall component width (set on .cp element)
 * Block level element
