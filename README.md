@@ -101,7 +101,7 @@ For example, we can add basic properties to a navigation Component, **cp_Nav**, 
 
 Sass 3.3 adds a shorthand syntax for creating BEM (block-element-modifier) class structures. The block-element relationship is less important in Fuzz, but the **"element-modifier"** relationship is replicated in the **"NameOfElement--variant-name"** portion of the general class syntax.
 
-For example, we have a set of promo components with the basic Component class **"cp_Promo"** (see below for more details on Fuzz Components), but also a featured promo component that is styled differently. To create this feature promo component we would add the class **"cp_Promo--feature"**. This allows us to write the following Sass code:
+For example, we have a set of promo components with the basic Component class **"cp_Promo"**, but also a featured promo component that is styled differently. To create this feature promo component we would add the class **"cp_Promo--feature"**. This allows us to write the following Sass code:
 
 ```scss
 .cp_Promo {
