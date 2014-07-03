@@ -1,4 +1,4 @@
-# Fuzz 2.0
+# Fuzz
 
 Fuzz 2.0 is a HTML/Sass-CSS framework of principles designed for fast implementation of custom, responsive grid-based websites.
 
