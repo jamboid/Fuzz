@@ -52,12 +52,12 @@ The four layout levels, outer to inner, are as follows:
       <div class="rg_Brand">...</div>
       <div class="rg_Nav--main rg_Nav">...</div>
     </header>
-    <div class="fd_PageContent">
+    <section class="fd_PageContent">
       <div class="rg_MainContent">...</div>
       <div class="rg_SubContent">
         <div class="gp_RelatedFeatures">...</div>
       </div>
-    </div>
+    </section>
     <footer class="fd_PageFooter">
       <div class="rg_Nav--footer rg_Nav">...</div>
     </footer>
