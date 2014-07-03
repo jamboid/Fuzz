@@ -1,12 +1,12 @@
 # Fuzz 2.0
 
-Fuzz 2.0 is a lightweight HTML/Sass-CSS framework designed to provide fast implementation of custom, responsive grid-based websites.
+Fuzz 2.0 is a HTML/Sass-CSS framework of principles designed for fast implementation of custom, responsive grid-based websites.
 
 The framework separates presentational concerns into different hierarchical layers. This simplifies the role of each layer and allows a greater proportion of the codebase to be modular and rapidly reusable.
 
 ## Hierarchy of Containers
 
-The modular Fuzz hierarchy is (sort of) based on the components of the classical typographic grid.
+The Fuzz hierarchy is (sort of) based on the components of the classical typographic grid.
 
 There are four levels of containers that can be used to create the general layout of the page and a pair of component-level containers that are used to place components precisely within that layout.
 
@@ -93,7 +93,7 @@ It allows us to do a couple of new things:
 
 ### 1. Specify base styles using CSS3 selectors
 
-With Fuzz 1.0 you added a prefix-only class to an element to add basic properties (e.g. "fd" as base class added to each Field element). Fuzz 2.0 removes the need for this extra class by using CSS3 selectors to target the prefix portion of the new class name structure.
+Fuzz 1.0 required adding a prefix-only class to an element to add basic properties (e.g. "fd" as a base class added to each Field element). Fuzz 2.0 removes the need for this extra class by using CSS3 selectors to target the prefix portion of the new class name structure.
 
 For example, we can add basic properties to a navigation Component, **cp_Nav**, by using the CSS selector **[class^="cp_"]**.
 
