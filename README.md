@@ -10,7 +10,7 @@ The Framework separates structural concerns into different hierarchical layers. 
 
 The element at each level is identified by a two-letter prefix added to any classes on that element. The classes should form a modular sequence from specific to general (the two-letter prefix on its own), following the general principles of object-oriented CSS.
 
-## Hierarchy
+## Hierarchy of Containers
 
 The modular hierarchy is (sort of) based on the components of the classical typographic grid.
 
@@ -31,7 +31,7 @@ The four layout levels, outer to inner, are as follows:
 
 ### Region - prefix "rg"
 
-* Define the general content regions of the page (e.g. Brand, Main Navigation, Main Column, Sub Column)
+* Define the general content regions within a Field (e.g. Brand, Main Navigation, Main Column, Sub Column)
 * Generally doesn't have margins or paddings set
 
 
@@ -97,6 +97,20 @@ For example, a main navigation menu component might have the following HTML:
 The component has the general "cp" component class, a more specific "cpNav" class that could be used to provide general list styles for the menu, and a very specific "cpMainNav" class that can be used to add or override styles for just the main navigation menu.
 
 The convention for ordering classes on an element is specific first, then getting more general and ending with the two-letter framework level class.
+
+## Creating an emergent grid with Fuzz components
+
+**This is a suggestion for how to use Fuzz principles to lay out components in a grid. It's how I do it, and has worked pretty well in at least a dozen client projects, but shouldn't be treated as a required part of the overall framework.**
+
+A typical layout grid for web design consists of a set of columns divided by gutters of space and the traditional approach to creating a web page aligned to such a grid had typically been to do it from the top down. That is, create regions that align to the columns of the grid, then add components within those regions that also align themselves to the column boundaries.
+
+The problem I've found with this, particularly in responsive designs, is the rules for aligning components can get very complex, very quickly. A component that is aligned to the left side of a container in one layout may be aligned to the right side or even sit in the middle of a container as the page resizes. Handling the alignment of such components by adding and removing CSS margins on one side or the other, across multiple layouts, is usually tricky and time-consuming.
+
+Instead, I've found creating components that self-align to the grid is easier and results in a more robust layout.
+
+This is how it works.
+
+All the containers above the component (.cp) level are give widths that include the grid gutters. For example, if a page has a three column layout
 
 
 ## Author

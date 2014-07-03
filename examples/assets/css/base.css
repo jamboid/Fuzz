@@ -1,4 +1,4 @@
-/* Fuzz framework - base.css 
+/* Fuzz framework - base.css
 
 INDEX
 ========
@@ -15,7 +15,7 @@ INDEX
     #2.2 Field (.fd)
     #2.3 Region (.rg)
     #2.4 Group (.gp)
-    #2.5 Component (.cp)    
+    #2.5 Component (.cp)
 
 #3 Page Components
     #3.1 Grid Alignment
@@ -89,7 +89,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .cpArticle .pageTitle {
-    padding:0;  
+    padding:0;
 }
 
 /*---[ #1.2 Paragraphs ]---*/
@@ -169,7 +169,7 @@ img {
 }
 
 .st .fdFooter {
-    padding:15px 0 0;   
+    padding:15px 0 0;
 }
 
 /*---[ #2.3 Region (.rg) ]---*/
@@ -218,7 +218,7 @@ img {
 }
 
 .rgMainContent .gpOf2 .cpMajor {
-    width:66.6666%; 
+    width:66.6666%;
 }
 
 .rgMainContent .gpOf2 .cpMinor {
@@ -230,7 +230,7 @@ img {
 }
 
 .rgMainContent .gpOf3 .cpMajor {
-    width:50%;  
+    width:50%;
 }
 
 .rgMainContent .gpOf3 .cpMinor {
@@ -252,7 +252,7 @@ img {
 /*---[ #3.2 Inner Base Styles ]---*/
 
 .cp .in {
-    
+
 }
 
 .rg .in {
@@ -272,12 +272,12 @@ img {
 }
 
 .rg .gp {
-    padding:0 1.5em 0 0;
+    padding:0 8px;
     width:auto;
 }
 
-.rg .cp .in { 
-    margin:1.5em 0 1.5em 1.5em;
+.rg .cp .in {
+    margin:1.5em 7px 1.5em;
 }
 
 .rg .cpHero .in {
@@ -293,7 +293,7 @@ img {
 
 /*---[ #3.4 Main Navigation ]---*/
 .cpMainNav .in {
-    margin:0 0 30px;    
+    margin:0 0 30px;
 }
 
 .cpMainNav ul {
@@ -320,7 +320,7 @@ img {
 
 /*---[ #3.5 Scroller - Notes: Responsive scroller ]---*/
 .cpScroller {
-    margin:20px 0;  
+    margin:20px 0;
     position:relative;
     height:100%;
     overflow:hidden;
@@ -372,12 +372,12 @@ img {
     width:80%;
     top:23px;
     left:25px;
-    color:#fff; 
+    color:#fff;
 }
 
 .cpScroller .scrollControls {
     margin:10px 0 0;
-    text-align:center;      
+    text-align:center;
 }
 
 .cpScroller .scrollControls a {
@@ -385,12 +385,12 @@ img {
     margin:0 5px;
     text-decoration:none;
     background:#666;
-    color:#fff; 
+    color:#fff;
 }
 
 .cpScroller .scrollControls a:hover,
 .cpScroller .scrollControls a:focus {
-    background:#333;    
+    background:#333;
 }
 
 /*  IE7 styles */
@@ -401,7 +401,7 @@ img {
 
 /*---[ #3.6 Hero Panel ]---*/
 .cpHero .in {
-    margin:0;   
+    margin:0;
 }
 
 
@@ -429,14 +429,14 @@ img {
 .rgMainContent .in {
     -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.3);
     -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.3);
-    box-shadow:2px 2px 0 rgba(0,0,0,0.3);   
+    box-shadow:2px 2px 0 rgba(0,0,0,0.3);
 }
 
 
 .scrollContent {
     -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;
     -moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;
-    box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;    
+    box-shadow:inset 0 0 10px rgba(0,0,0,0.3), 0 1px 0 #fff;
 }
 
 /*---[ #4.3 Text Shadow ]---*/
@@ -470,7 +470,7 @@ a {
 
 /*---[ #5.1 Max Width = 1024px ]---*/
 
-@media only screen and (max-width:1024px) { 
+@media only screen and (max-width:1024px) {
     .rgMainContent,
     .rgSubContent {
         width: 100%
@@ -493,17 +493,17 @@ a {
     .detail .desc {
         overflow: visible
     }
-    
+
     /*---[ Scroller ]---*/
     .cpScroller ul li {
-        width:33.3333%; 
+        width:33.3333%;
     }
 }
 
 /*---[ #5.1 Max Width = 768px ]---*/
-@media only screen and (max-width: 768px) { 
-    
-    /*---[ Grid Alignment - margins ]---*/  
+@media only screen and (max-width: 768px) {
+
+    /*---[ Grid Alignment - margins ]---*/
     .st .fd,
     .rg,
     .rg .gp .cp {
@@ -536,10 +536,10 @@ a {
         height: auto;
         padding: 0 20px 20px;
     }
-    
+
     .js .cpMainNav ul {
         padding:0;
-        margin-top:0;       
+        margin-top:0;
     }
 
     .js .cpMainNav ul li {
@@ -550,16 +550,16 @@ a {
     .js .cpMainNav.show ul li:first-child {
         margin-top: 0
     }
-    
+
     /*---[ Generic Component Elements ]---*/
-    
+
     .cp .img {
         border:none;
     }
-    
+
     /*---[ Scroller ]---*/
     .cpScroller ul li {
-        width:50%;  
+        width:50%;
     }
 
     .stSiteHeader h1 span {
@@ -568,7 +568,7 @@ a {
 }
 
 /*---[ #5.1 Max Width = 480px ]---*/
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
     .detail .image {
         float: none;
         max-width: 100%;
@@ -591,10 +591,10 @@ a {
         margin-left: 15px;
         margin-right: 15px;
     }
-    
+
         /*---[ Scroller ]---*/
     .cpScroller ul li {
-        width:100%; 
+        width:100%;
     }
 }
 
@@ -687,7 +687,7 @@ a {
 
 /*
 .gp {
-    border-bottom:2px solid #ddd;   
+    border-bottom:2px solid #ddd;
 }
 
 .gp:before,
@@ -699,7 +699,7 @@ a {
     height:2px;
     background:#F6F2E9;
     display:block;
-    z-index:100;        
+    z-index:100;
 }
 
 .gp:before {
@@ -709,5 +709,5 @@ a {
 .gp:after {
     right:0;
 }
- 
+
 */
