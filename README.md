@@ -164,7 +164,7 @@ A real-world example of this would be the flexible grid system used on the [Good
 
 Below the level of the Fuzz Component, we still have lots of different HTML elements and groups of elements that need styled in a systematic and rational way.
 
-It's tempting to follow the hierarchy down further and tie component element styles to the Fuzz Component that contains them, along the lines of the BEM system. But at this level we should be thinking in terms of an [Atomic design](http://bradfrostweb.com/blog/post/atomic-web-design/) or other bottom-up system that can be used as a construction kit for building larger components.
+It's tempting to follow the hierarchy down further and tie component element styles to the Fuzz Component that contains them, along the lines of the BEM system. But at this level we should be thinking in terms of an [Atomic design](http://bradfrostweb.com/blog/post/atomic-web-design/) or other bottom-up system that can be used as a construction kit for building larger components. This prevents a lot of style replication but still allows us to override styles locally using nested selectors based on the modular Fuzz classes.
 
 Creating a UI kit takes planning and an overall understanding of the site design, so you need to start there. Identify all the elements and sub-components and how their styles can be semantically categorised and sorted. A lot of this depends on the design and your own personal preferences for organising your Sass-CSS. But I would strongly suggest that the classes used to implement this system use the same BEM **element-modifier** relationship used the Fuzz system:
 
