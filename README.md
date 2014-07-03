@@ -163,7 +163,7 @@ The 4+2 levels of the Fuzz layout framework should provide enough structure to e
 
 In this situation, create a new two-letter prefix that makes sense and follow all the standard syntax rules.
 
-A real-world example of this would be the flexible grid system used on the [Good website](http://wearegood.com). The grid system was complex enough that it made sense to create a new set of classes to manage it. These classes used a "gd" prefix (it currently uses the older 1.0 syntax) and could be applied alongside the Fuzz framework classes at multiple levels.
+A real-world example of this would be the flexible grid system used on the [Good website](http://wearegood.com). The grid system was complex enough that it made sense to create a new set of classes to manage it. These classes used a "gd" prefix (it currently uses the older Fuzz 1.0 syntax) and could be applied alongside the Fuzz framework classes at multiple levels.
 
 ---
 
