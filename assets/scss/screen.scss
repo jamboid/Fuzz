@@ -24,13 +24,14 @@ The following Tools are required to process this Sass framework correctly:
 @import "components/typography";
 @import "components/layout-page";
 @import "components/layout-fuzz";
-@import "components/forms";
+//@import "components/forms";
 @import "components/links";
-@import "components/images";
-@import "components/videos";
+//@import "components/images";
+//@import "components/videos";
 
 /* !== Components */
-@import "components/prose";
+//@import "components/atom-buttons";
+//@import "components/prose";
 @import "components/brand";
 //@import "components/navigation";
 //@import "components/navigation-slide-menu";
@@ -38,7 +39,7 @@ The following Tools are required to process this Sass framework correctly:
 @import "components/demo-promo-components";
 
 /* !== Extras */
-@import "components/states";
+//@import "components/states";
 @import "components/style-guide";
 
 /* !== Vendor */
