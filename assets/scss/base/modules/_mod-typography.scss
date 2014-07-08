@@ -1,0 +1,12 @@
+/* ! Framework Module - TYPOGRAPHY */
+
+/*
+ * @mixins
+ */
+
+/* !== Hide Text */
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9999px;
+  display:block;
+}

@@ -1,0 +1,59 @@
+/* != Images */
+img {
+  max-width:100%;
+  height:auto !important;
+}
+
+.image {
+  line-height: 0;
+  margin-bottom: em(20);
+
+  &[data-loading=click] {
+    cursor:pointer;
+  }
+
+  &.lazyLoader {
+    background:$clrVeryLightGrey url(img/ajax_loader.gif) center center no-repeat;
+    padding-top: 50%;
+
+    img {
+      opacity:0;
+      transition:opacity .5s linear;
+    }
+  }
+
+
+  &.imageLoaded {
+    padding-top: 0;
+    background-image:none;
+
+  }
+
+  &.imageDisplayed {
+    img {
+      opacity:1;
+    }
+  }
+
+  img {
+    box-sizing:border-box;
+    padding: 0;
+    border:5px solid $clrBlack;
+  }
+}
+
+/* IE8 doesn't like max-width, so remove it and make sure any images have a correct width set */
+.ie8 {
+  img {
+    max-width:none !important;
+  }
+
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* !== IE image rendering - improves appearence of resized images in IE  */
+img { -ms-interpolation-mode: bicubic; }

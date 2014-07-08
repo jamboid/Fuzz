@@ -1,0 +1,88 @@
+/* != Framework - Global Colour Settings */
+
+// Variables and other settings that are used globally
+
+/*
+
+HOW TO USE COLOUR VARIABLES IN THIS SASS PROJECT
+------------------------------------------------
+
+There are a couple of options available to you:
+
+================
+1-STEP SYSTEM
+================
+
+1. Define your colour palette as a set of COLOUR-DESCRIPTIVE VARIABLES (e.g. $clrPaleBlue)
+2. Use these COLOUR-DESCRIPTIVE VARIABLES directly, throughout the project's other .scss files
+
+RESULT: Colours are presented in the code in a much more readable and meaningful format
+
+BEST FOR: Projects with one theme
+
+
+================
+2-STEP SYSTEM
+================
+
+1. Define your colour palette as a set of COLOUR-DESCRIPTIVE VARIABLES (e.g. $clrPaleBlue)
+2. Define a set of SEMANTIC-STRUCTURAL VARIABLES to use throughout your Sass files (e.g. $clrPageHeaderBackground)
+3. Set the SEMANTIC VARIABLES using the COLOUR-DESCRIPTIVE VARIABLES in this file only
+
+RESULT: Colours are managed in one location and colour changes will not require renaming variables throughout the set of Sass files
+
+BEST FOR: Projects that involve multiple themes or skins
+
+*/
+
+/* !== COLOUR-DESCRIPTIVE VARIABLES */
+$clrNone: none;
+$clrInvsibile: rgba(0,0,0,0);
+
+/* ! Black to White */
+$clrBlack: #000;
+$clrDarkGrey: #333;
+$clrGrey: #666;
+$clrLightGrey: #999;
+$clrReallyLightGrey: #ccc;
+$clrVeryLightGrey: #efefef;
+$clrOffWhite: #f9f9f9;
+$clrWhite: #fff;
+
+/* ! Blues */
+$clrBlue: #428BCA;
+$clrLightBlue:#78a0da;
+
+/* ! Reds */
+$clrRed:#ca1b1b;
+
+/* ! Greens */
+$clrGreen: #5d8c12;
+
+/* ! Oranges */
+$clrOrange:#bc4100;
+
+$clrPurple:#8a47de;
+
+/* !== Gradients */
+
+$clrDarkGreyGradient: linear-gradient($clrGrey, $clrDarkGrey);
+$clrDarkGreyGradientHover: linear-gradient(darken($clrGrey,10), darken($clrDarkGrey, 10));
+
+$clrBlueGradient:linear-gradient(lighten($clrBlue, 15), $clrBlue);
+$clrBlueGradientHover:linear-gradient($clrBlue, darken($clrBlue, 15));
+
+/* !=== SEMANTIC VARIABLES */
+/* NOTE: Use COLOUR-DESCRIPTIVE VARIABLES to define these. Don't add hex/rgb/rgba values directly */
+
+
+$clrSchemeColour: $clrBlue;
+
+/* Document */
+$clrBodyBack: $clrDarkGrey;
+$clrBodyText: $clrBlack;
+
+/* Forms */
+$clrFormsFieldBack: $clrLightGrey;
+$clrFormsSearchBorder:$clrLightGrey;
+$clrFormsFileBack:$clrVeryLightGrey;

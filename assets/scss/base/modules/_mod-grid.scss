@@ -1,0 +1,16 @@
+/* != Framework Module - GRID */
+
+/* !== Mixin for Ratio Grid Widths */
+
+$gridRatio: 1.618;
+$gridBase: 16;
+$gridTotalSize: 15;
+
+
+@mixin ratioGrid($unit) {
+  @if $unit == 0 {
+    width: 100%;
+  } @else {
+    width: percentage(( $unit * $gridRatio) / ($gridTotalSize * $gridRatio));
+  }
+}

@@ -1,0 +1,166 @@
+/* != Layout - Grid  */
+/*
+NOTE: Styles to set the layout of the larger containers and regions in the template.
+      Uses the FUZZ framework hierarchy (https://github.com/jamboid/Fuzz)
+*/
+
+/* !== Fuzz Framework Levels */
+
+/* Basic styles for 5 levels of the framework */
+
+/* !=== Stages (.st) - Level 1 - Full Width Container(s) */
+[class^=st_] {
+  position: relative;
+  width:100%;
+}
+
+.st_Header {
+  background:$clrWhite;
+  color:$clrLightGrey;
+}
+
+.st_Page {
+  background:$clrWhite;
+  color:$clrDarkGrey;
+}
+
+.st_PageLayout {
+
+}
+
+.st_Footer {
+  padding: em(20) 0;
+  background:darken($clrSchemeColour,25);
+  color:$clrWhite;
+}
+
+/* !=== Field (.fd) - Level 2 - Horizontal Page Sections (e.g. Header, Page Content, Footer) */
+/* NOTES: Set fixed/non-MQ width and then add a null MQ to set width for MQ-compatible browsers */
+[class^=fd_] {
+  @extend %clearfix;
+  clear:both;
+  position: relative;
+  margin:0 auto;
+  @include page-content-width;
+}
+
+/*
+.fd_PageLayout {
+  transition:background-color 0.1s ease;
+
+  &:hover, &:focus {
+    background:$clrGrey;
+  }
+}
+*/
+
+/* !=== Region (.rg) - Level 3 - Significant Page Regions (e.g. Main Content, Sub Content) */
+[class^=rg_] {
+  @extend %clearfix;
+}
+
+/* !=== Group (.gp) - Level 4 - Semantic Groups of Components */
+[class^="gp_"] {
+  z-index:0;
+  clear:both;
+  width:100%;
+}
+
+
+.gp_Row {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+
+  @include mq($mqLeia){
+    display: block;
+  }
+
+  [class^="cp_"] {
+    flex-grow:1;
+  }
+}
+
+.gp_OfTwo {
+  .cp_Promo {
+    width: 50%;
+
+    @include mq($mqLeia){
+      width: 100%;
+    }
+
+    .title {
+      background:lighten($clrBlue, 40);
+      border-color:lighten($clrBlue, 25);
+    }
+  }
+}
+
+.gp_OfThree {
+  .cp_Promo {
+    width: 33.333%;
+
+    &--feature {
+      width: 100%;
+    }
+
+    @include mq($mqLeia){
+      width: 100%;
+    }
+
+    .title {
+      background:lighten($clrRed, 40);
+      border-color:lighten($clrRed, 25);
+    }
+  }
+
+  &--with-feature {
+    .cp_Promo {
+      .title {
+        background:lighten($clrPurple, 25);
+        border-color:lighten($clrPurple, 15);
+      }
+    }
+  }
+
+}
+
+.gp_OfFour {
+  .cp_Promo {
+    width: 25%;
+
+    @include mq($mqHan){
+      width: 50%;
+    }
+
+    @include mq($mqLeia){
+      width: 100%;
+    }
+
+    .title {
+      background:lighten($clrGreen, 40);
+      border-color:lighten($clrGreen, 20);
+    }
+  }
+}
+
+/* !=== Component (.cp) - Self-Contained Functional Modules (e.g. Main Navigation, Carousel, Body Content) */
+[class^=cp_] {
+  width:100%;
+  display:flex;
+  align-items:stretch;
+}
+
+/* !=== Inner (.in) - Component Inner Container - Set Component styles and layout using this element */
+.in {
+  @extend %clearfix;
+  @include rem(margin, 0 20px 45px);
+
+  @include mq($mqHan) {
+    @include rem(margin, 0 15px 30px);
+  }
+
+  @include mq($mqLuke){
+    @include rem(margin, 0 10px 30px);
+  }
+}

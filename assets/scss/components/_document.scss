@@ -1,0 +1,15 @@
+/* != Document */
+
+/* Rules for <html> and <body> go here */
+
+body {
+  background:darken($clrSchemeColour,25);
+  color:$clrBlack;
+  font-size:100%;
+  font-family:$bodyfontfamily;
+  line-height:1.5;
+  color:$clrDarkGrey;
+  @include mq(plusOne($mqHan), $query1: min) {
+    font-size: 125%;
+  }
+}

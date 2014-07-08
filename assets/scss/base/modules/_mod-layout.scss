@@ -1,0 +1,66 @@
+/* != Framework Module - LAYOUT */
+
+//
+// @variables
+//
+
+$maxPageWidth: em(1000);
+$fixedContentWidth: em(900);
+$deviceWidth:device-width;
+
+/*  !== Fixed Width Layout */
+@mixin page-content-width {
+  width:$fixedContentWidth;
+  @include mq(empty) {
+    width:100%;
+    max-width:$maxPageWidth;
+  }
+}
+
+
+/* !== Set opacity with legacy browser fallbacks */
+@mixin opacity($trans) {
+  -ms-filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})");
+  opacity: $trans;
+}
+
+/* != Placeholders - Layout - CLEARFIX */
+
+/* !== Modern Version - IE8+ */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*
+ * Placeholder version of the modern clearfix mixin
+ */
+%clearfix {
+  @include clearfix;
+}
+
+/* !== Legacy Version - IE6/7+ */
+%clearfixLegacy {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/*
+ * Legacy support for inline-block in IE7 (maybe IE6)
+ */
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+}

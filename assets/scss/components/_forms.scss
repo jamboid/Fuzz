@@ -1,0 +1,84 @@
+/* != Forms */
+
+/* !== Default Styles */
+fieldset {
+  margin:0;
+  padding:em(20);
+  border:none;
+  background:$clrOffWhite;
+}
+
+.formItem,
+.form-item {
+  margin:0 0 em(20);
+}
+
+label,
+input,
+button,
+select,
+textarea {
+  @include rem(font-size, $baseFontSize);
+  font-family:$formfontfamily;
+}
+
+/* Select Dropdown Styles */
+select {
+  -webkit-appearance:button;
+}
+
+input,select,textarea {
+  border:1px solid $clrFormsFieldBack;
+  padding:em(5);
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  border:1px solid $clrFormsSearchBorder;
+  padding-left: 0;
+}
+
+input[type=file] {
+  background:$clrFormsFileBack;
+
+  @include mq($mqArtoo){
+    width: 100%;
+  }
+}
+
+input[type=radio],
+input[type=checkbox]{
+  display:inline;
+  margin-right:8px;
+}
+
+input[type=submit],
+button {
+  @extend %buttonBase;
+  @include basicButton($clrWhite, $clrBlueGradient, $hoverBackground: $clrBlueGradientHover);
+  cursor:pointer;
+  border:none;
+  -webkit-appearance:none;
+}
+
+label {
+  display: block;
+  font-weight: $bold;
+}
+
+/* No label */
+.noLabel {
+  position: relative;
+  input {
+    margin-top: em(20);
+  }
+
+  label {
+    display: none;
+  }
+}
+
+/* !=== Validation */
+.error {
+
+}

@@ -1,0 +1,66 @@
+/* !== Typography  */
+
+/* !== Headings */
+h1,h2,h3,h4,h5,h6 {
+  font-weight:$bold;
+  line-height: 1.3;
+  margin:0;
+}
+
+.siteTitle {
+  margin:0;
+  @include rem(font-size, 24px);
+  font-weight:$normal;
+  color:$clrBlue;
+}
+
+.ttPage {
+  @include rem(font-size, 28px);
+  font-weight: $normal;
+  margin:1em 0 0.5em;
+}
+
+.ttComp {
+
+}
+
+/* !== Paragraphs */
+p {
+  margin:0 0 1em;
+  @include rem(font-size, $baseFontSize);
+}
+
+/* !== Lists */
+li,dt,dd {
+  @include rem(font-size, $baseFontSize);
+}
+
+li {
+  margin: 0 0 1em;
+}
+
+li li {
+  font-size:0.9em;
+}
+
+.cleanlist {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+/* !== Type Styles */
+
+strong {
+  font-weight:$bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* !== Code */
+code, pre {
+  @include rem(font-size, 16px);
+  font-family:$codefontfamily;
+}

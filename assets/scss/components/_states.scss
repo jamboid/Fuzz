@@ -1,0 +1,10 @@
+/* != Utilities */
+
+/* !== Display State Classes  */
+.isVisible {
+  @extend %isVisible;
+}
+
+.isHidden {
+  @extend %isHidden;
+}

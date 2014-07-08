@@ -1,0 +1,17 @@
+/* != Base Module - MATHS */
+
+//
+// @functions
+//
+
+/* !== Add 1 to a number */
+// Useful for setting a min-width ("greater than") MQ using an existing "max-width" breakpoint
+@function plusOne($number) {
+  @return $number + 1;
+}
+
+/* !== Subtract 1 from a number */
+// Useful for setting a max-width ("less than") MQ using an existing "min-width" breakpoint
+@function minusOne($number) {
+  @return $number - 1;
+}

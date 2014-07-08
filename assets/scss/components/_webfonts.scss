@@ -1,0 +1,30 @@
+/* != Webfonts */
+
+/* !== Styles for hiding text until webfonts load and then fading it on nicely */
+
+/* !=== For use with the Site.webfonts.js module */
+.js [class^="st_"] {
+  opacity:0;
+  filter: alpha(opacity=0);
+}
+
+.js .showText [class^="st_"] {
+  opacity:1;
+  filter: alpha(opacity=1);
+}
+
+/* Styles for Google Webfont loader */
+.wf-loading body [class^="st_"] {
+  opacity:0 !important;
+  filter: alpha(opacity=0)!important;
+}
+
+.wf-active body [class^="st_"],
+.wf-inactive body [class^="st_"] {
+  opacity:1 !important;
+  filter: alpha(opacity=1)!important;
+  -webkit-transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out;
+}

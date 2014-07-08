@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 5</title>
+    <description>Created with Sketch.</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop" sketch:type="MSArtboardGroup" transform="translate(-180.000000, -220.000000)" fill="#000000">
+            <path d="M220,260 L220,220 L240,220 L240,260 L280,260 L280,280 L240,280 L240,320 L220,320 L220,280 L180,280 L180,260 L220,260 Z" id="Rectangle-5" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
