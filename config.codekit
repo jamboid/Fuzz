@@ -1191,26 +1191,20 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/libs\/imagesloaded.pkgd.js",
-			"position": 2,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/assets\/js\/modules\/Site.utils.js",
-			"position": 3,
+			"position": 2,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/assets\/js\/modules\/Site.events.js",
-			"position": 4,
+			"position": 3,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/assets\/js\/modules\/Site.analytics.js",
-			"position": 5,
+			"position": 4,
 			"type": 1
 			}
 		]
