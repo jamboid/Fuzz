@@ -176,7 +176,7 @@ This gives a consistency between the two halts of the overall styling system.
 
 Included in this repo is a demo page (index.html) showing a several groups of basic Fuzz components aligned to a simple 4-column grid. The templates are written in CodeKit's in-built templating language, kit, so you'll need CodeKit 2 if you want to do any editing.
 
-To view the page you should open the project in CodeKit 2 and use the in-built preview, or run it using a local web server (I use [Anvil](http://anvilformac.com/) to create a POW-based server, but anything will do).  
+To view the page you should open the project in CodeKit 2 and use the in-built preview, or run it using a local web server (I use [Anvil](http://anvilformac.com/) to create a POW-based server, but it's just a simple HTML page so anything will do).  
 
 ## Author
 
