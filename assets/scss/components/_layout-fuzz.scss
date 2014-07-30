@@ -81,6 +81,14 @@ NOTE: Styles to set the layout of the larger containers and regions in the templ
   }
 }
 
+.no-flexbox {
+  .gp_Row {
+    [class^="cp_"] {
+      float: left;
+    }
+  }
+}
+
 .gp_OfTwo {
   .cp_Promo {
     width: 50%;
