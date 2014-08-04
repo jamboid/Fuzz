@@ -82,7 +82,6 @@ Having these inner and outer containers allows you to separate the component wid
 * Block level element
 * **Not used a prefix for more specific classes**
 
-
 ## The General Syntax
 
 The Fuzz 2.0 syntax for layout elements is an attempt to create a more useful naming convention for the classes added to Fuzz elements. The basic syntax is as follows:
@@ -127,12 +126,11 @@ which will output this CSS:
 
 Unfortunately we need to still use multiple classes for element variants because the "starts with" CSS3 selector trick used to remove the prefix-only class doesn't work with the &-- BEM syntax, but it does produce better organised Sass code and a more consistent naming convention for element variants.
 
-**Note:** If you need to split up the Sass for variants within a file, or across multiple files, don't worry about the empty parent class selectors. These won't compile in the final CSS file and won't produce more anymore CSS than if you had all the **--variant** classes under the one parent selector.
+**Note:** If you need to split up the Sass for variants within a file, or across multiple files, don't worry about the empty parent class selectors. These won't compile in the final CSS file and won't produce anymore CSS than if you had all the **--variant** classes under the one parent selector.
 
 ### Multiple Base Classes
 
 It's sometimes useful to break different aspects of an element's presentation into different classes to follow a modular CSS approach, so a Fuzz element can have multiple base classes (and additional variant classes) if required.
-
 
 ## Creating Modular CSS
 
