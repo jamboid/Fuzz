@@ -170,7 +170,7 @@ Creating a UI kit takes planning and an overall understanding of the site design
 
 **nameOfElement--variant**
 
-This gives a consistency between the two halts of the overall styling system.
+This gives a consistency between the two halves of the overall styling system.
 
 ## Demo Page
 
