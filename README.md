@@ -80,7 +80,7 @@ Having these inner and outer containers allows you to separate the component wid
 
 * Inner container used to set component's padding, margin and appearance independent of overall component width (set on .cp element)
 * Block level element
-* **Not used a prefix for more specific classes**
+* **Not used as a prefix for more specific classes**
 
 ## The General Syntax
 
