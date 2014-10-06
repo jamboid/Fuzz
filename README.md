@@ -94,7 +94,7 @@ It allows us to do a couple of new things:
 
 Fuzz 1.0 required adding a prefix-only class to an element to add basic properties (e.g. "fd" as a base class added to each Field element). Fuzz 2.0 removes the need for this extra class by using CSS3 selectors to target the prefix portion of the new class name structure.
 
-For example, we can add basic properties to a navigation Component, **cp_Nav**, by using the CSS selector **[class^="cp_"]**.
+For example, we can add basic properties to a navigation Component, **cp_Nav**, by using the CSS selector **[class\*="cp_"]**.
 
 ### 2. Use the "element-modifier" part of the BEM syntax in Sass
 
@@ -159,7 +159,7 @@ In this situation, create a new two-letter prefix that makes sense and follow al
 A real-world example of this would be the flexible grid system used on the [Good website](http://wearegood.com). The grid system was complex enough that it made sense to create a new set of classes to manage it. These classes used a "gd" prefix (it currently uses the older Fuzz 1.0 syntax) and could be applied alongside the Fuzz framework classes at multiple levels.
 
 ## Modular Styles for Component Elements
-
+ 
 Below the level of the Fuzz Component, we still have lots of different HTML elements and groups of elements that need styled in a systematic and rational way.
 
 It's tempting to follow the hierarchy down further and tie component element styles to the Fuzz Component that contains them, along the lines of the BEM system. But at this level we should be thinking in terms of an [Atomic design](http://bradfrostweb.com/blog/post/atomic-web-design/) or other bottom-up system that can be used as a construction kit for building larger components. This prevents a lot of style replication but still allows us to override styles locally using nested selectors based on the modular Fuzz classes.
@@ -174,7 +174,7 @@ This gives a consistency between the two halves of the overall styling system.
 
 Included in this repo is a demo page (index.html) showing  several groups of basic Fuzz components aligned to a simple 4-column grid. The templates are written in CodeKit's in-built templating language, kit, so you'll need CodeKit 2 if you want to do any editing.
 
-To view the page you should open the project in CodeKit 2 and use the in-built preview, or run it using a local web server (I use [Anvil](http://anvilformac.com/) to create a POW-based server, but it's just a simple HTML page so anything will do).  
+To view the page you should open the project in CodeKit 2 and use the in-built preview, or run it using a local web server (I use [Anvil](http://anvilformac.com/) to create a Pow-based server, but it's just a simple HTML page so anything will do).  
 
 ## Author
 
