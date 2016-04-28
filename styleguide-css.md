@@ -55,7 +55,7 @@ Nested selectors should also be separated by 1 line. However, the first block of
 ```
 
 ## Media Queries
-To reduce the size of the final, compiled CSS, nesting media queries inside selectors should be avoided if the media query is used multiple times. For a given Sass file, or subsection within a file, the media queries should be added at the end, in descending size, with rules grouped together within them.
+To reduce the size of the final, compiled CSS, nesting media queries inside selectors should be avoided if the media query is used multiple times. For a given Sass file, or subsection within a file, the media queries should be added at the end, in descending size, grouping rules within them.
 
 ```css
 .topLevelSelector {
@@ -70,7 +70,7 @@ To reduce the size of the final, compiled CSS, nesting media queries inside sele
   }  
 }
 
-/* !== Related media query added after rules, rather than   */
+/* !== Related media queries encapsulate groups of rules, rather than being embedded within them  */
 @include mq($bpHan) {
   .topLevelSelector {
     padding:5px;
