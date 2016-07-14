@@ -81,3 +81,32 @@ To reduce the size of the final, compiled CSS, nesting media queries inside sele
   }
 }
 ```
+
+## File Names
+The CSS for each Fuzz component, object or container should be contained in a separate Sass partial file. The name of the file should be the same as the Fuzz component's base class, after the leading partial underscore. Custom namespace classes for things like text styles (tx_) or grids (gd_) can be collected in a single file
+
+```
+|- _cp_MainNav.scss
+|- _cp_Dropdown.scss
+...
+|- _fd_Section.scss
+|- _fd_Article.scss
+...
+|- _gd_Grids.scss
+|- _tx_Styles.scss
+...
+|- _ob_Button.scss
+|- _ob_Image.scss
+```
+
+If you are using a sibling or other selector that combines two different Fuzz elements, the selector and rules should be included in the files for the element the styles are applied to.
+
+```css
+/* This selector should be included in the _fd_Section.scss partial */
+.fd_PageHeader {
+  + .fd_Section {
+    padding-top:0;
+    margin:0;
+  }
+}
+```
