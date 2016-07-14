@@ -1,9 +1,0 @@
-/* != Videos */
-
-.media {
-
-  @include flex-video-container();
-  .placeholder {
-    display: block;
-  }
-}
